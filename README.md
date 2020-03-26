@@ -46,9 +46,9 @@ password:secret
 #### Router
 |路径|方法|用途|
 |:---|----|:---:|
-|"/"           | get |首页|
-|"/postarticle" |post |创建新博客文章|
-|"/articles"    |get |请求所有文章列表|
-|"/article/:id" |get |请求单独一页文章|
-|"/comment/:id" |get |取得文章评论|
-|"/comment/:id" |post |对当前id文章评论|
+|"/"           | get |index|
+|"/postarticle" |post |post a new article|
+|"/articles"    |get |get all articles|
+|"/article/:id" |get |get a article by id|
+|"/comment/:id" |get |get the comment from article by id|
+|"/comment/:id" |post |post a comment to the article by id|
