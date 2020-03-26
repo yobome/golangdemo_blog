@@ -2,13 +2,24 @@ package main
 
 import (
 	"github.com/labstack/echo"
-	"net/http"
+	"github.com/labstack/echo/middleware"
+	"golangdemo_blog_microservice/service"
+)
+
+const servingAddress = ":1323"
+const (
+	authname = "admin"
+	authpw   = "secret"
 )
 
 func main() {
 	e := echo.New()
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "welcome to echo, hello world!")
-	})
-	e.Start(":6060")
+	service.Router(e)                                                                          //启动路由
+	e.Use(middleware.BasicAuth(func(username, password string, c echo.Context) (bool, error) { //简单认证
+		if username == authname && password == authpw {
+			return true, nil
+		}
+		return false, nil
+	}))
+	e.Logger.Fatal(e.Start(servingAddress))
 }
