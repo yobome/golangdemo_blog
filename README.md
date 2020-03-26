@@ -27,7 +27,7 @@ comment
 +--------------+------------+------+-----+---------+--------------+
 | Field        | Type       | Null | Key | Default | Extra        |
 +--------------+------------+------+-----+---------+--------------+
-| id           | int(64)    | NO   |     | NULL    |			  |
+| id           | int(64)    | NO   |     | NULL    |			        |
 | Cid          | int(64)    | NO   | PRI | NULL    |AUTO_INCREMENT|
 | fromIP       | VARCHAR(20)| NO   |     | NULL    |              |
 | timestamp    | int(11)    | NO   |     | NULL    |              |
