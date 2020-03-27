@@ -1,4 +1,4 @@
-# golangdemo_blog_microservice
+# golangdemo_blog
 
 ## Introduction
 It's a simple blog module based on echo framework.
